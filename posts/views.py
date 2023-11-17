@@ -74,7 +74,7 @@ class PostCreate(CreateView):
 
 class PostUpdate(UpdateView):
     model = Post
-    fields = ['title', 'content']  # Fields to be displayed in the form
+    fields = '__all__'  # Fields to be displayed in the form
     template_name = 'psots/post_update.html'  # Replace with your template name
     success_url = reverse_lazy('post_list')  # Replace 'post_list' with your URL name for post list
 
